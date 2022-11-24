@@ -9,7 +9,7 @@ Usage:
 """
 
 import torch
-
+model = torch.hub.load('Aishice26/yolov5s', 'custom', 'https://github.com/Aishice26/yolov5s/blob/main/best.pt') 
 
 def _create(name, pretrained=True, channels=3, classes=80, autoshape=True, verbose=True, device=None):
     """Creates or loads a YOLOv5 model
@@ -73,7 +73,7 @@ def _create(name, pretrained=True, channels=3, classes=80, autoshape=True, verbo
         raise Exception(s) from e
 
 
-def custom(path='path/to/model.pt', autoshape=True, _verbose=True, device=None):
+def custom(path='https://github.com/Aishice26/yolov5s/blob/main/best.pt', autoshape=True, _verbose=True, device=None):
     # YOLOv5 custom or local model
     return _create(path, autoshape=autoshape, verbose=_verbose, device=device)
 
@@ -145,7 +145,7 @@ if __name__ == '__main__':
 
     # Model
     model = _create(name=opt.model, pretrained=True, channels=3, classes=80, autoshape=True, verbose=True)
-    # model = custom(path='path/to/model.pt')  # custom
+    # model = custom(path='https://github.com/Aishice26/yolov5s/blob/main/best.pt')  # custom
 
     # Images
     imgs = [
