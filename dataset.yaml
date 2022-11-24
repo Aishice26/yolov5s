@@ -1,0 +1,7 @@
+
+train: "/content/drive/MyDrive/yolo_dataset/train"
+val: "/content/drive/MyDrive/yolo_dataset/val"
+
+nc: 7
+
+names: ['Car', 'Number Plate', 'Blur Number Plate', 'Two Wheeler', 'Auto', 'Bus','Truck']
